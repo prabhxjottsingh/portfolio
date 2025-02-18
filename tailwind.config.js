@@ -10,6 +10,8 @@ module.exports = {
         "border-bl": "border-bl 4s infinite",
         "border-br": "border-br 4s infinite",
         "border-glow": "border-glow 2s ease-in-out infinite",
+        "slide-down": "slide-down 0.3s ease-out",
+        "slide-up": "slide-up 0.3s ease-out",
       },
       keyframes: {
         blob: {
@@ -106,6 +108,26 @@ module.exports = {
           "50%": {
             "box-shadow": "0 0 20px 4px rgba(59, 130, 246, 0.3)",
             "border-color": "rgba(59, 130, 246, 0.4)",
+          },
+        },
+        "slide-down": {
+          "0%": {
+            transform: "translateY(-10%)",
+            opacity: 0,
+          },
+          "100%": {
+            transform: "translateY(0)",
+            opacity: 1,
+          },
+        },
+        "slide-up": {
+          "0%": {
+            transform: "translateY(0)",
+            opacity: 1,
+          },
+          "100%": {
+            transform: "translateY(-10%)",
+            opacity: 0,
           },
         },
       },

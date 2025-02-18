@@ -1,9 +1,33 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink as RouterLink, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isClosing, setIsClosing] = useState(false);
   const location = useLocation();
+
+  const handleMenuClose = () => {
+    setIsClosing(true);
+    setTimeout(() => {
+      setIsMenuOpen(false);
+      setIsClosing(false);
+    }, 300); // Match this with animation duration
+  };
+
+  const handleMenuToggle = () => {
+    if (isMenuOpen) {
+      handleMenuClose();
+    } else {
+      setIsMenuOpen(true);
+    }
+  };
+
+  // Close menu when route changes
+  useEffect(() => {
+    if (isMenuOpen) {
+      handleMenuClose();
+    }
+  }, [location]);
 
   return (
     <nav className="fixed w-full bg-gray-900/80 backdrop-blur-md border-b border-gray-800 z-50">
@@ -21,26 +45,23 @@ const Navbar = () => {
             <NavLink to="/" isActive={location.pathname === "/"}>
               Home
             </NavLink>
-            <NavLink 
-              to="/about" 
-              isActive={location.pathname === "/about"}
-            >
+            <NavLink to="/about" isActive={location.pathname === "/about"}>
               About
             </NavLink>
-            <NavLink 
-              to="/experience" 
+            <NavLink
+              to="/experience"
               isActive={location.pathname === "/experience"}
             >
               Experience
             </NavLink>
-            <NavLink 
-              to="/projects" 
+            <NavLink
+              to="/projects"
               isActive={location.pathname === "/projects"}
             >
               Projects
             </NavLink>
-            <NavLink 
-              to="/achievements" 
+            <NavLink
+              to="/achievements"
               isActive={location.pathname === "/achievements"}
             >
               Achievements
@@ -50,11 +71,11 @@ const Navbar = () => {
           {/* Mobile menu button */}
           <div className="md:hidden">
             <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              onClick={handleMenuToggle}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-blue-400 focus:outline-none"
             >
               <svg
-                className="h-6 w-6"
+                className="h-6 w-6 transition-transform duration-300"
                 stroke="currentColor"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -81,41 +102,49 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu */}
-      {isMenuOpen && (
-        <div className="md:hidden bg-gray-900 border-t border-gray-800">
+      {(isMenuOpen || isClosing) && (
+        <div
+          className={`
+            md:hidden 
+            bg-gray-900 
+            border-t 
+            border-gray-800
+            ${isClosing ? "animate-slide-up" : "animate-slide-down"}
+          `}
+        >
           <div className="px-2 pt-2 pb-3 space-y-1">
-            <MobileNavLink 
-              to="/" 
+            <MobileNavLink
+              to="/"
               isActive={location.pathname === "/"}
-              onClick={() => setIsMenuOpen(false)}
+              onClick={() => handleMenuClose()}
             >
               Home
             </MobileNavLink>
-            <MobileNavLink 
-              to="/about" 
+            <MobileNavLink
+              to="/about"
               isActive={location.pathname === "/about"}
-              onClick={() => setIsMenuOpen(false)}
+              onClick={() => handleMenuClose()}
             >
               About
             </MobileNavLink>
-            <MobileNavLink 
-              to="/experience" 
+            <MobileNavLink
+              to="/experience"
               isActive={location.pathname === "/experience"}
-              onClick={() => setIsMenuOpen(false)}
+              onClick={() => handleMenuClose()}
             >
               Experience
             </MobileNavLink>
-            <MobileNavLink 
-              to="/projects" 
+            <MobileNavLink
+              to="/projects"
               isActive={location.pathname === "/projects"}
-              onClick={() => setIsMenuOpen(false)}
+              onClick={() => handleMenuClose()}
             >
               Projects
             </MobileNavLink>
-            <MobileNavLink 
-              to="/achievements" 
+            <MobileNavLink
+              to="/achievements"
               isActive={location.pathname === "/achievements"}
-              onClick={() => setIsMenuOpen(false)}
+              onClick={() => handleMenuClose()}
             >
               Achievements
             </MobileNavLink>
@@ -189,38 +218,47 @@ const MobileNavLink = ({
     to={to}
     onClick={onClick}
     className={`
-      relative
       block 
       px-3 
       py-2 
       text-base 
       font-medium 
-      text-gray-300 
-      hover:text-blue-400 
       hover:bg-gray-800 
       rounded-md 
       transition-colors 
       duration-200
-      ${isActive ? "text-blue-400 bg-gray-800" : ""}
+      ${isActive ? "bg-gray-800" : ""}
     `}
   >
-    <span className="relative z-10">{children}</span>
     <span
       className={`
-        absolute 
-        bottom-2 
-        left-3 
-        right-3 
-        h-0.5 
-        bg-blue-400 
-        transform 
-        origin-left
-        transition-transform 
-        duration-300 
-        ease-out
-        ${isActive ? "scale-x-100" : "scale-x-0"}
-      `}
-    />
+      relative 
+      inline-block
+      text-gray-300
+      hover:text-blue-400
+      transition-colors
+      duration-200
+      ${isActive ? "text-blue-400" : ""}
+    `}
+    >
+      {children}
+      <span
+        className={`
+          absolute 
+          bottom-0 
+          left-0 
+          right-0 
+          h-0.5 
+          bg-blue-400 
+          transform 
+          origin-left
+          transition-transform 
+          duration-300 
+          ease-out
+          ${isActive ? "scale-x-100" : "scale-x-0"}
+        `}
+      />
+    </span>
   </RouterLink>
 );
 
