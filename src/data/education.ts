@@ -3,7 +3,7 @@ const education = [
         school: "Chandigarh University",
         degree: "Bachelor of Technology in Computer Science",
         year: "2020 - 2024",
-        score: { label: "CGPA", value: "8.39/10" },
+        score: { label: "CGPA", value: "8.39 / 10" },
     },
     {
         school: "Good Shepherd Public School",

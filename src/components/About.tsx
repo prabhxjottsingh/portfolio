@@ -121,9 +121,9 @@ const About = () => {
                       <p className="text-gray-400 text-sm">{edu.year}</p>
                     </div>
                     <div className="bg-gray-900/50 px-4 py-2 rounded-lg border border-gray-700">
-                      <p className="text-gray-400 text-sm mb-1">
+                      {/* <p className="text-gray-400 text-sm mb-1">
                         {edu.score.label}
-                      </p>
+                      </p> */}
                       <p className="text-blue-400 font-semibold text-right">
                         {edu.score.value}
                       </p>
