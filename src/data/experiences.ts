@@ -3,7 +3,7 @@ import { Skill } from "./skills";
 export const experiences = [
     {
         title: "Full Stack Developer",
-        company: "Ecozen",
+        company: { name: "Ecozen", websiteUrl: "https://www.ecozensolutions.com/" },
         period: "Jul 2024 - Present",
         description: [
             "Built a provisioning system with real-time WebSocket updates for production pipelines, leveraging ReactFlow for task arrangement and automating resource creation using templates.",
@@ -41,7 +41,7 @@ export const experiences = [
     },
     {
         title: "Full Stack Developer Intern",
-        company: "Clappia | No Code Platform",
+        company: { name: "Clappia | No Code Platform", websiteUrl: "https://clappia.com" },
         period: "Dec 2023 - June 2024",
         description: [
             "Engineered backend integration of real-time web sockets, offering users live task progress updates and resource copyingvisibility.Utilized a modular approach, involving refactoring of a monolithic function into smaller, reusable multiple functions, thereby enhancing platform reliability, user engagement, and code maintainability.",
@@ -78,7 +78,7 @@ export const experiences = [
     },
     {
         title: "Teaching Assistant",
-        company: "Ask Senior",
+        company: { name: "Ask Senior", websiteUrl: "https://asksenior.in" },
         period: "Mar 2023 - Oct 2023",
         description: [
             "Conducted Leetcode Contest Discussions",

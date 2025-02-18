@@ -31,12 +31,18 @@ const Experience = () => {
               >
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                   <div>
-                    <h3 className="text-xl font-semibold text-white flex items-center gap-2">
+                    <h3 className="text-2xl font-semibold text-white flex items-center gap-2">
                       <span>{exp.title}</span>
                     </h3>
-                    <p className="text-blue-400 font-medium flex items-center gap-2 mt-1">
+                    <p className="text-blue-400 text-xl flex items-center gap-2 mt-1 hover:underline transition-transform hover:scale-105 duration-300 ease-out">
                       <Building2 className="w-4 h-4" />
-                      {exp.company}
+                      <a
+                        href={exp.company.websiteUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {exp.company.name}
+                      </a>
                     </p>
                   </div>
                   <p className="text-gray-400 mt-1 md:mt-0 flex items-center gap-2">
