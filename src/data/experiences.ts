@@ -1,3 +1,5 @@
+import { Skill } from "./skills";
+
 export const experiences = [
     {
         title: "Full Stack Developer",
@@ -9,7 +11,33 @@ export const experiences = [
             "Developed access control APIs for managing resource permissions and implemented a logging system to track changes across 10+ APIs for admin visibility.",
             "Implemented task dependency management, enforcing sequential task execution, preventing cyclic dependencies, and adding deadline tracking to monitor delayed resources.",
         ],
-        skills: ["React", "NodeJs", "MongoDB", "Express", "Javascript", "Tailwind"],
+        skills: [
+            {
+                name: "React",
+                icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg"
+            },
+            {
+                name: "NodeJs",
+                icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg"
+            },
+            {
+                name: "MongoDB",
+                icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original.svg"
+            },
+            {
+                name: "Express",
+                icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original.svg"
+            },
+            {
+                name: "Javascript",
+                icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
+            },
+            {
+                name: "Tailwind",
+                icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-plain.svg"
+            }
+
+        ],
     },
     {
         title: "Full Stack Developer Intern",
@@ -21,7 +49,32 @@ export const experiences = [
             "Enabled state machine rerun and stoppage for workflow control, created reusable components for multiple fields, and automated charts creation upon app creation through AWS Stream resource, enhancing application localization and providing insightful data visualization.",
             "Enhanced system efficiency by implementing CRUD operations, optimized database performance with local storage caching, effectively managed DynamoDB streams, developed and subscribed to AWS Lambda functions, and implemented rate limiting for email verification, ensuring optimal system performance and security."
         ],
-        skills: ["Angular", "TypeScript", "AWS", "NodeJs", "DynamoDB", "WebSocket"],
+        skills: [
+            {
+                name: "Angular",
+                icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/angularjs/angularjs-original.svg"
+            },
+            {
+                name: "TypeScript",
+                icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg"
+            },
+            {
+                name: "AWS",
+                icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original.svg"
+            },
+            {
+                name: "NodeJs",
+                icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg"
+            },
+            {
+                name: "DynamoDB",
+                icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original.svg"
+            },
+            {
+                name: "WebSocket",
+                icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/websocket/websocket-original.svg"
+            },
+        ],
     },
     {
         title: "Teaching Assistant",
@@ -31,7 +84,24 @@ export const experiences = [
             "Conducted Leetcode Contest Discussions",
             "Solved Data Structures and Algorithms related queries.",
         ],
-        skills: ["Algorithms", "Data Structures", "C++", "Communation"],
+        skills: [
+            {
+                name: "Algorithms",
+                icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/algorithms/algorithms-original.svg"
+            },
+            {
+                name: "Data Structures",
+                icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/datastructures/datastructures-original.svg"
+            },
+            {
+                name: "C++",
+                icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg"
+            },
+            {
+                name: "Communication",
+                icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/communication/communication-original.svg"
+            }
+        ],
     },
 
 ];

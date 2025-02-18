@@ -1,12 +1,15 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
-  ],
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
       animation: {
         blob: "blob 7s infinite",
+        "border-tl": "border-tl 4s infinite",
+        "border-tr": "border-tr 4s infinite",
+        "border-bl": "border-bl 4s infinite",
+        "border-br": "border-br 4s infinite",
+        "border-glow": "border-glow 2s ease-in-out infinite",
       },
       keyframes: {
         blob: {
@@ -23,8 +26,90 @@ module.exports = {
             transform: "translate(0px, 0px) scale(1)",
           },
         },
+        "border-tl": {
+          "0%, 100%": {
+            top: "0%",
+            left: "0%",
+          },
+          "25%": {
+            top: "0%",
+            left: "100%",
+          },
+          "50%": {
+            top: "100%",
+            left: "100%",
+          },
+          "75%": {
+            top: "100%",
+            left: "0%",
+          },
+        },
+        "border-tr": {
+          "0%, 100%": {
+            top: "0%",
+            right: "0%",
+          },
+          "25%": {
+            top: "100%",
+            right: "0%",
+          },
+          "50%": {
+            top: "100%",
+            right: "100%",
+          },
+          "75%": {
+            top: "0%",
+            right: "100%",
+          },
+        },
+        "border-bl": {
+          "0%, 100%": {
+            bottom: "0%",
+            left: "0%",
+          },
+          "25%": {
+            bottom: "100%",
+            left: "0%",
+          },
+          "50%": {
+            bottom: "100%",
+            left: "100%",
+          },
+          "75%": {
+            bottom: "0%",
+            left: "100%",
+          },
+        },
+        "border-br": {
+          "0%, 100%": {
+            bottom: "0%",
+            right: "0%",
+          },
+          "25%": {
+            bottom: "0%",
+            right: "100%",
+          },
+          "50%": {
+            bottom: "100%",
+            right: "100%",
+          },
+          "75%": {
+            bottom: "100%",
+            right: "0%",
+          },
+        },
+        "border-glow": {
+          "0%, 100%": {
+            "box-shadow": "0 0 0 0 rgba(59, 130, 246, 0.5)",
+            "border-color": "rgba(59, 130, 246, 0.1)",
+          },
+          "50%": {
+            "box-shadow": "0 0 20px 4px rgba(59, 130, 246, 0.3)",
+            "border-color": "rgba(59, 130, 246, 0.4)",
+          },
+        },
       },
     },
   },
   plugins: [],
-} 
+};

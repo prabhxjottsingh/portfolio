@@ -1,5 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import TypewriterEffect from "./TypeWriterEffect";
+import { Briefcase, Telescope } from "lucide-react";
 
 const Hero = () => {
   const navigate = useNavigate();
@@ -14,38 +16,35 @@ const Hero = () => {
 
   return (
     <div className="min-h-screen bg-gray-900 flex flex-col justify-center items-center p-4">
+      <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-blue-500/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-indigo-500/5 rounded-full blur-3xl" />
+
       <div className="max-w-6xl w-full text-center">
         <p className="text-xl text-gray-400 mb-6">
           Building innovative solutions through code
         </p>
         <h1 className="text-4xl md:text-5xl font-bold text-white mb-8">
-          Hey, I'm Prabhjot Singh - Software Engineer
+          <TypewriterEffect
+            html={
+              "Hey, I'm Prabhjot Singh - Software <span class='text-blue-400'> Engineer</span>"
+            }
+            speed={50}
+          />
         </h1>
         <div className="flex justify-center gap-4">
           <button
             onClick={() => navigate("/experience")}
-            className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+            className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors flex items-center gap-2"
           >
-            View Experiences
+            <span>View Experiences</span>
+            <Briefcase className="w-4 h-4" />
           </button>
           <button
             onClick={handleViewResume}
             className="border-2 border-blue-400 text-blue-400 px-6 py-2 rounded-lg hover:bg-gray-800 transition-colors flex items-center gap-2"
           >
             <span>View Resume</span>
-            <svg
-              className="w-4 h-4"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
-              />
-            </svg>
+            <Telescope className="w-4 h-4" />
           </button>
         </div>
       </div>
