@@ -6,10 +6,11 @@ export const experiences = [
         company: { name: "Ecozen", websiteUrl: "https://www.ecozensolutions.com/" },
         period: "Jul 2024 - Present",
         description: [
-            "Built a provisioning system with real-time WebSocket updates for production pipelines, leveraging ReactFlow for task arrangement and automating resource creation using templates.",
-            "Enhanced backend reliability by adding type safety checks with middleware, integrating 15+ APIs, and creating 30+ APIs for CRUD operations using ZOD and optimized MongoDB queries.",
-            "Developed access control APIs for managing resource permissions and implemented a logging system to track changes across 10+ APIs for admin visibility.",
-            "Implemented task dependency management, enforcing sequential task execution, preventing cyclic dependencies, and adding deadline tracking to monitor delayed resources.",
+            "Designed a hierarchical task management system with tree-structured visibility for devices, subsystems, and tasks, optimizing workflow automation using MongoDB and React Flow.",
+            "Implemented MongoDB Aggregation Pipelines and caching mechanisms to enhance data retrieval performance, real-time updates, and analytics for task tracking and device provisioning",
+            "Automated resource and task lifecycle management by integrating logging, bulkWrite operations across multiple MongoDB tables, and WebSockets for real-time synchronization.",
+            "Utilized a DFS-based approach to validate task and subsystem flows, ensuring proper task completion while enforcing child resource dependencies, allowing execution only after parent resources are completed.",
+            "Enhanced role-based access control by implementing Super Admin-controlled user permissions, ensuring secure and efficient access to product and task data.",
         ],
         skills: [
             {

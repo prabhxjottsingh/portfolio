@@ -32,7 +32,7 @@ const Project = () => {
                       key={i}
                       className="px-3 py-1 bg-gray-900 text-blue-400 rounded-full text-sm font-medium border border-gray-700"
                     >
-                      {tech}
+                      {tech.name}
                     </span>
                   ))}
                 </div>
