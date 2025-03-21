@@ -66,6 +66,9 @@ const Navbar = () => {
             >
               Achievements
             </NavLink>
+            <NavLink to="/contact" isActive={location.pathname === "/contact"}>
+              Contact
+            </NavLink>
           </div>
 
           {/* Mobile menu button */}
@@ -147,6 +150,13 @@ const Navbar = () => {
               onClick={() => handleMenuClose()}
             >
               Achievements
+            </MobileNavLink>
+            <MobileNavLink
+              to="/contact"
+              isActive={location.pathname === "/contact"}
+              onClick={() => handleMenuClose()}
+            >
+              Contact
             </MobileNavLink>
           </div>
         </div>

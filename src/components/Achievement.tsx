@@ -1,6 +1,6 @@
 import React from "react";
 import { achievements as achievementData } from "../data";
-import { Trophy } from "lucide-react";
+import { ExternalLink, Trophy } from "lucide-react";
 
 const Achievement = () => {
   const achievements = achievementData;
@@ -25,10 +25,10 @@ const Achievement = () => {
               target="_blank"
               rel="noopener noreferrer"
               key={index}
-              className="group relative bg-gray-800/50 backdrop-blur-sm rounded-lg p-6 border border-blue-400/20 transition-all duration-300 hover:border-blue-400/40 hover:scale-[1.02]"
+              className="group relative bg-gray-800/50 backdrop-blur-sm rounded-lg p-6 border border-blue-400/20 transition-all duration-300 hover:border-blue-400/40 hover:scale-[1.02] "
             >
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-gray-900/50 rounded-lg p-2 flex items-center justify-center">
+              <div className="flex items-start gap-4 ">
+                <div className="flex-shrink-0 w-12 h-12 bg-gray-900/50 rounded-lg p-2 flex items-center justify-center ">
                   <img
                     src={achievement.image}
                     alt=""
@@ -36,9 +36,10 @@ const Achievement = () => {
                     onError={handleImageError}
                   />
                 </div>
-                <p className="text-gray-100 leading-relaxed">
+                <p className="text-gray-100 leading-relaxed group-hover:text-blue-500">
                   {achievement.title}
                 </p>
+                <ExternalLink className="w-6 h-6 text-white group-hover:text-blue-500" />
               </div>
             </a>
           ))}

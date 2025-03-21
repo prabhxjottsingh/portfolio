@@ -8,6 +8,7 @@ import "./App.css";
 import About from "./components/About";
 import Achievement from "./components/Achievement";
 import NotFound from "./components/NotFound";
+import Contact from "./components/Contact";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
             <Route path="/projects" element={<Project />} />
             <Route path="/achievements" element={<Achievement />} />
             <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
