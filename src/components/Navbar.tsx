@@ -115,7 +115,7 @@ const Navbar = () => {
             ${isClosing ? "animate-slide-up" : "animate-slide-down"}
           `}
         >
-          <div className="px-2 pt-2 pb-3 space-y-1">
+          <div className="px-2 pt-2 pb-3 space-y-1 text-center">
             <MobileNavLink
               to="/"
               isActive={location.pathname === "/"}
@@ -233,7 +233,7 @@ const MobileNavLink = ({
       py-2 
       text-base 
       font-medium 
-      hover:bg-gray-800 
+      hover:bg-gray-800
       rounded-md 
       transition-colors 
       duration-200
