@@ -2,9 +2,44 @@ import { Skill } from "./skills";
 
 export const experiences = [
     {
+        title: "Software Engineer",
+        company: { name: "INDmoney", websiteUrl: "https://www.indmoney.com/" },
+        period: "May 2025 - Present",
+        description: [
+            "Revolving around manageing the highload of data for accounts and financial products.",
+        ],
+        skills: [
+            {
+                name: "Python",
+                icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"
+            },
+            {
+                name: "Django",
+                icon: "https://avatars.githubusercontent.com/u/27804?s=200&v=4"
+            },
+            {
+                name: "Clickhouse",
+                icon: "https://avatars.githubusercontent.com/u/54801242?s=200&v=4"
+            },
+            {
+                name: "Docker",
+                icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg"
+            },
+            {
+                name: "AWS",
+                icon: "https://avatars.githubusercontent.com/u/2232217?s=200&v=4"
+            },
+            {
+                name: "Kubernetes",
+                icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/kubernetes/kubernetes-plain.svg"
+            }
+
+        ],
+    },
+    {
         title: "Full Stack Developer",
         company: { name: "Ecozen", websiteUrl: "https://www.ecozensolutions.com/" },
-        period: "Jul 2024 - Present",
+        period: "Jul 2024 - May 2025",
         description: [
             "Designed a hierarchical task management system with tree-structured visibility for devices, subsystems, and tasks, optimizing workflow automation using MongoDB and React Flow.",
             "Implemented MongoDB Aggregation Pipelines and caching mechanisms to enhance data retrieval performance, real-time updates, and analytics for task tracking and device provisioning",
