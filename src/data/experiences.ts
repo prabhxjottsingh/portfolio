@@ -6,6 +6,10 @@ export const experiences = [
         company: { name: "INDmoney", websiteUrl: "https://www.indmoney.com/" },
         period: "May 2025 - Present",
         description: [
+            "Developed and optimized backend workflows for ERPNext integration by implementing mock API decorators, batch processing, and Redis caching—enhancing performance, debugging efficiency, and system reliability across development and pre-production setups.",
+            "Engineered and maintained multiple data migration and synchronization DAGs to automate reconciliation with external systems (e.g., US Stocks team), ensuring data integrity, reducing manual intervention, and optimizing database load with efficient chunk-based operations.",
+            "Enhanced large-scale financial data processing pipelines by re-architecting accrual and invoice calculation flows, introducing batching, logging, and fault-tolerant Celery task management to eliminate worker crashes and memory overflows.",
+            "Built internal dashboards and monitoring tools for issue tracking and real-time visibility into transactional and posting errors, empowering business teams to resolve data inconsistencies without engineering dependency.",
             "Revolving around manageing the highload of data for accounts and financial products.",
         ],
         skills: [

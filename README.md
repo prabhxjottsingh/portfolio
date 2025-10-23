@@ -15,10 +15,10 @@ You can check out my portfolio live at the following link:
 - Project showcase to highlight my work
 - Achievements section to highlight significant milestones
 
-## Installation
+<!-- ## Installation
 
 To run this project locally, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/prabhxjottsingh/portfolio.git
+   git clone https://github.com/prabhxjottsingh/portfolio.git -->
